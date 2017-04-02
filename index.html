@@ -40,12 +40,111 @@
 				letter-spacing: 0;
 				line-height: 24px;
 			}
+
+			.u-tab {
+				height: 34px;
+				margin: 10px auto;
+				line-height: 34px;
+				border-radius: 8px;
+				border: 1px solid #858382;
+				font-size: 12px;
+				background: #000;
+				opacity: 0.9;
+			}
+
+			.u-tab li {
+				display: inline-block;
+				width: 49%;
+				text-align: center;
+				border-right: 1px solid #858382;
+
+			}
+
+			.u-tab li:nth-child(2) {
+				border-right: none;
+			}
+
+			.m-button-bar {
+				width: 70%;
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 5px;
+			}
+
+			.top-nav {
+				position: fixed;
+				top: 0;
+				height: 34px;
+				width: 100%;
+				background: #000;
+			}
+
+			.top-icon {
+				position: absolute;
+				top: 8px;
+				left: 8px;
+				height: 18px;
+				width: 18px;
+				z-index: 99;
+				background-image: url(img/back.png);
+				background-size: contain;
+			}
+
+			.top-text {
+				color: #fff;
+				position: absolute;
+				top: 7px;
+				left: 26px;
+				font-size: 12px;
+			}
+
+			.bottom-nav {
+				position: fixed;
+				bottom: 0;
+				background-color: #000;
+				width: 100%;
+				height: 64px;
+			}
+
+			.bottom-nav table {
+				color: #fff;
+				width: 100%;
+				opacity: 0.9;
+			}
+
+
+			.bottom-icon th {
+				width: 33%;
+				height: 40px;
+				background-size: 22px 22px;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			.bottom-icon th:nth-child(1) {
+				background-image: url(img/menu.png);
+			}
+			
+			.bottom-icon th:nth-child(2) {
+				background-image: url(img/font1.png);
+			}
+
+			.bottom-icon th:nth-child(3) {
+				background-image: url(img/moon.png);
+			}
+
+			.bottom-text td {
+				width: 33%;
+				text-align: center;
+				margin-top: 14px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="wrap">
-			<div>
-				
+			<div class="top-nav">
+				<div class="top-icon"></div>
+				<div class="top-text">下一页</div>
 			</div>
 			<div class="m-read-content">
 				<h4>招聘前端</h4>
@@ -54,11 +153,25 @@
 				<p>  招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果：</p>
 				<p>  招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果：招聘前端工程师，尤其是中高级前端工程师，扎实的 JS 基础绝对是必要条件，基础不扎实的工程师在面对前端开发中的各种问题时大概率会束手无策。在考察候选人 JS 基础的时候，我经常会提供下面这段代码，然后让候选人分析它实际运行的结果：</p>
 			</div>
-			<div>
-				<ul>
-					<li><button>上一页</button></li>
-					<li><button>下一页</button></li>
+			<div class="m-button-bar">
+				<ul class="u-tab">
+					<li>上一页</li>
+					<li>下一页</li>
 				</ul>
+			</div>
+			<div class="bottom-nav">
+				<table>
+					<tr class="bottom-icon">
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+					<tr class="bottom-text">
+						<td>目录</td>
+						<td>字体</td>
+						<td>夜间</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<script src="lib/zepto.min.js"></script>
